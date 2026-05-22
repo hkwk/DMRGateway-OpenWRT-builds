@@ -74,7 +74,7 @@ jobs:
             CATEGORY:=Network
             TITLE:=DMRGateway
             URL:=https://github.com/g4klx/DMRGateway
-            DEPENDS:=+libmosquitto
+            DEPENDS:=+libmosquitto +nlohmannjson
           endef
           
           define Package/dmrgateway/description
@@ -98,11 +98,11 @@ jobs:
           $(eval $(call BuildPackage,dmrgateway))
           EOF
 
-      - name: Update Feeds & Install mosquitto
+      - name: Update Feeds & Install Packages
         working-directory: sdk
         run: |
           ./scripts/feeds update -a
-          ./scripts/feeds install libmosquitto
+          ./scripts/feeds install libmosquitto nlohmannjson
 
       - name: Compile DMRGateway
         working-directory: sdk
