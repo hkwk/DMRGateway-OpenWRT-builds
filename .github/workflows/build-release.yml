@@ -58,7 +58,7 @@ jobs:
           PKG_RELEASE:=1
           
           PKG_SOURCE:=master.tar.gz
-          PKG_SOURCE_URL:=https://codeload.github.com/g4klx/DMRGateway/tar.gz/refs/heads
+          PKG_SOURCE_URL:=https://github.com/g4klx/DMRGateway/archive/refs/heads
           PKG_HASH:=skip
           
           PKG_BUILD_DIR:=$(BUILD_DIR)/DMRGateway-master
