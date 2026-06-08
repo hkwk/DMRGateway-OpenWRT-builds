@@ -74,7 +74,7 @@ jobs:
             CATEGORY:=Network
             TITLE:=DMRGateway
             URL:=https://github.com/g4klx/DMRGateway
-            DEPENDS:=+libmosquitto +nlohmannjson
+            DEPENDS:=+libmosquitto +nlohmannjson +libstdcpp
           endef
           
           define Package/dmrgateway/description
